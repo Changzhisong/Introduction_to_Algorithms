@@ -101,7 +101,7 @@ ___
 		思想：递归地求解三种情况下的最大子数组并从中选取最大的一个子数组。  
 		<br>
 	* **线性求解法（Kadane算法）【O(n)】**	  
-		若已知A[1..j]的最大子数组，扩展到A[1..j+1]时，A[1..j+1]的最大子数组要么是A[1..j]的最大子数组，要么是某个子数组A[i..j+1](1<=i<=j,以j+1结尾)。  
+		若已知A[1..j]的最大子数组，扩展到A[1..j+1]时，A[1..j+1]的最大子数组要么是A[1..j]的最大子数组，要么是某个子数组A[i..j+1]（1<=i<=j,以j+1结尾）。  
 		最大子数组元素个数大于等于2时，其元素和必定大于0  
 		最大子数组元素个数为1时，该元素为序列中最大元素。  
 		思想：将数组从头开始累加，如果碰到累加和小于等于0，则前面的元素全部舍弃，从下一个元素重新开始累加。  
@@ -115,18 +115,7 @@ ___
 		利用公式$c_{ij}=\mathop{\sum}\limits\_{k=0}\limits^n {a_ik}\cdot{b_kj}$求解
 	* **分治递归法【O($n^3$)】**  
 		利用以下公式递归调用求解  
-		\begin{bmatrix}
-		C_11 & C_12 \\
-		C_21 & C_22 \\
-		\end{matrix}=
-		\begin{bmatrix}
-		A_11 & A_12 \\
-		A_21 & A_22 \\
-		\end{matrix}+
-		\begin{bmatrix}
-		B_11 & B_12 \\
-		B_21 & B_22 \\
-		\end{matrix}  
+		$\begin{bmatrix}C_11 &C_12  \\\  C_21& C_22 \end{matrix}=\begin{bmatrix}A_11 &A_12  \\\  A_21& A_22 \end{matrix}+\begin{bmatrix}B_11 &B_12  \\\ B_21& B_22 \\\end{matrix}  
 ![ppt演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter04/Doc/矩阵相乘（递归）.jpg)   
 	* **Strassen算法**
 		Strassen算法的核心思想是令递归树不那么茂盛，即只递归进行7次而不是8次了。但代价是增加了几次矩阵之间的加分。
