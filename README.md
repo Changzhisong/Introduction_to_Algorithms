@@ -115,7 +115,7 @@ ___
 		利用公式$c_{ij}=\mathop{\sum}\limits\_{k=0}\limits^n {a_ik}\cdot{b_kj}$求解
 	* **分治递归法【O($n^3$)】**  
 		利用以下公式递归调用求解  
-		$\begin{bmatrix}C_11 &C_12  \\\  C_21& C_22 \end{matrix}=\begin{bmatrix}A_11 &A_12  \\\  A_21& A_22 \end{matrix}+\begin{bmatrix}B_11 &B_12  \\\ B_21& B_22 \\\end{matrix}  
+		$\begin{bmatrix}C_{11} &C_{12}  \\\  C_{21}& C_{22} \end{bmatrix}=\begin{bmatrix}A_{11} &A_{12}  \\\  A_{21}&A_{22}  \end{bmatrix}+\begin{bmatrix}B_{11} &B_{12}  \\\  B_{21}& B_{22} \end{bmatrix}$  
 ![ppt演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter04/Doc/矩阵相乘（递归）.jpg)   
 	* **Strassen算法**
 		Strassen算法的核心思想是令递归树不那么茂盛，即只递归进行7次而不是8次了。但代价是增加了几次矩阵之间的加分。
