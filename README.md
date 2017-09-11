@@ -16,9 +16,19 @@
 	* 渐进记号的定义
 	* 渐近记号Θ、Ο、Ω、o、ω之间的关系
 * [chapter04](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter04 "跳转到chapter04")
-	* ***更新中...***
-	
-	
+	* 最大子数组问题（三种方法）
+	* 矩阵乘法的Strassen算法
+	* 求解递归式（代入法、递归树、主方法）
+* [chapter05](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter05 "跳转到chapter05")
+	* 随机化排列数组
+* [chapter06](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter06 "跳转到chapter06")
+	* 堆
+	* 堆排序
+	* 优先队列
+* [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
+	* 快速排序
+* [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
+	* *** 更新中 ***  
 ***
 ---
 ___
@@ -162,8 +172,8 @@ ___
 		节点i与其左右孩子的值对比选出最大者交换至i处，若最大者为i则结束否则向下递归直至子树都满足最大堆性质。且假定以其左右孩子为堆顶的堆均已是最大堆。
 	* **建堆【O（n）】**  
 		利用自底向上的方法及维护堆的性质的过程，把一个大小为A.length的数组A[1..n]转换为最大堆。  
-		因为$A[\*floor{n/2}+1..n]$中的元素为树的叶子节点，所以就可以直接把$A[\floor*{n/2}+1..n]$中的元素看成只包含一个元素的堆，从$/floor{n/2}$往1开始递减来维护堆的性质即可建成堆  
-	删除根节点用于堆排序。
+		因为$A[\lfloor n/2 \rfloor+1..n]$中的元素为树的叶子节点，所以就可以直接把$A[\lfloor n/2 \rfloor+1..n]$中的元素看成只包含一个元素的堆，从$\lfloor n/2 \rfloor$往1开始递减来维护堆的性质即可建成堆。  
+	*删除根节点用于堆排序。*
 	* **堆排序**  
 		在建堆后，可得根节点A[1]为数组A的最大值，互换A[1]和A[n]后，控制heapSize的值来去掉堆的节点n,重新维护堆的性质，形成将A[1..n-1]上构成新的最大堆，然后重复直到A.HeapSize为2，即堆中只剩两个元素了。
 	* **优先队列**  
