@@ -8,13 +8,13 @@
 ****
 ## 目录
 * [chapter02](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter02 "跳转到chapter02")
-	* [插入排序](#######2017-8-12######)
-	* [选择排序](#######2017-8-12######】)
-	* [归并排序](#######2017-8-15######)
-	* [冒泡排序](#######2017-8-15######)
+	* [插入排序](#插入排序on2)
+	* [选择排序](#选择排序on2)
+	* [归并排序](#归并排序onlgn)
+	* [冒泡排序](#冒泡排序on2)
 * [chapter03](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter03 "跳转到chapter03")
 	* [渐进记号的定义](#渐进记号的定义)
-	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](#渐进记号的定义)
+	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](##渐近记号ΘΟΩoω之间的关系)
 * [chapter04](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter04 "跳转到chapter04")
 	* [最大子数组问题](#最大子数组问题)  
 	暴力求解法  
@@ -36,7 +36,7 @@
 	* [堆](#堆)  
 	堆排序  
 	* [优先队列](#优先队列)  
-	* [TopK问题](#TopK问题)
+	* [TopK问题](#topk问题)
 * [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
 	* [快速排序](#快速排序)
 * [chapter08](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter08 "跳转到chapter08")  
@@ -188,6 +188,7 @@ ___
 	*删除根节点用于堆排序。*
 	* **堆排序【O(nlgn)】**  
 		在建堆后，可得根节点A[1]为数组A的最大值，互换A[1]和A[n]后，控制heapSize的值来去掉堆的节点n,重新维护堆的性质，形成将A[1..n-1]上构成新的最大堆，然后重复直到A.HeapSize为2，即堆中只剩两个元素了。
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter06/doc/heapSort.jpg)   
 * ### 优先队列  
 	优先队列是一种用来维护（插入元素、寻找最值...）由一组元素构成的集合S的数据结构。  
 	普通队列是一种先进先出的数据结构，元素在队列尾追加，而从队列头删除。在优先队列中，元素被赋予优先级，当访问元素时，具有最高优先级（最值）的最先被删除（最高级先出）  
@@ -212,7 +213,39 @@ ___
 ### \######2017-9-12######
 * ### 快速排序  
 	采用分治思想：  
-	**......**
+	　1.　从数列中选择一个元素，称为基准（一般选择列首或者列尾）；  
+	　2.　重新排列数列。把所有比基准小的元素放到其前面，大的放到其后面（分区操作）；  
+	　3.　递归地把两个分区的子数列排序  
+	递归到最底部时，数列的大小是零或者是1，即已经排好序了。  
+	伪代码如下：
+    ```
+	QuickSort（A,p,r）  
+    if p<r  
+        q=Partion(A，p,r)    //分区操作
+        QuickSort（A,p,q-1）    //左边递归
+        QuickSort（A,q+1,r）    //右边递归
+    ```
+	其中分区操作Partition部分是代码的核心:
+    ````
+    Partition(A,p,r)
+    x=A[r]    //基准
+    i=p-1    //i用来分隔基准左边与右边
+    for j=p to r-1
+        if A[j]<=x
+            i=i+1
+            exchange A[i] with A[j]
+    exchange A[i+1] with A[r]
+    return i+1
+    ````
+
+	![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter06/doc/Partition.jpg)  
+	**时间：** 在最坏情况下为$Θ(n^2)$,但这种情况并不常见，期望时间复杂度为$O(nlgn)$,这个时间通常比同等$O(nlgn)$的排序算法快，因为其隐含的常数因子小。且该算法是原址排序，比较实用。
+	* **随机化快速排序**  
+		只需在选择基准的时候采用随机化选择数列的某一个作为基准。然后与末位或者首位元素进行交换，在调用Partition(A,p,r)即可。
+
+-----
+### \######2017-9-12######
+**......**
 		
 		
 		
