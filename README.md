@@ -16,19 +16,29 @@
 	* 渐进记号的定义
 	* 渐近记号Θ、Ο、Ω、o、ω之间的关系
 * [chapter04](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter04 "跳转到chapter04")
-	* 最大子数组问题（三种方法）
-	* 矩阵乘法的Strassen算法
-	* 求解递归式（代入法、递归树、主方法）
+	* [最大子数组问题](#最大子数组问题)  
+	暴力求解法  
+	分治递归法  
+	线性求解法（Kadane算法）  
+	* 矩阵乘法
+	朴素求解法  
+	Strassen算法  
+	* 求解递归式
+	代入法  
+	递归树  
+	主方法  
 * [chapter05](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter05 "跳转到chapter05")
 	* 随机化排列数组
+	优先级法随机排列  
+	原址法随机排列
 * [chapter06](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter06 "跳转到chapter06")
 	* 堆
 	* 堆排序
 	* 优先队列
 * [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
 	* 快速排序
-* [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
-	* *** 更新中 ***  
+* [chapter08](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter08 "跳转到chapter08")  
+	***更新中...***  
 ***
 ---
 ___
@@ -167,7 +177,7 @@ ___
 	**最大堆：** 除根节点外的任何节点的值小于等于父节点的值  
 	**最小堆：** 除根节点外的任何节点的值大于等于父节点的值  
 	以下以最大堆为例：  
-![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/chapter06/Doc/heap.png)   
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter06/doc/heap.png)   
 	* **维护堆的性质【O（lgn）】**  
 		节点i与其左右孩子的值对比选出最大者交换至i处，若最大者为i则结束否则向下递归直至子树都满足最大堆性质。且假定以其左右孩子为堆顶的堆均已是最大堆。
 	* **建堆【O（n）】**  
