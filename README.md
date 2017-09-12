@@ -14,7 +14,7 @@
 	* [冒泡排序](#冒泡排序on2)
 * [chapter03](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter03 "跳转到chapter03")
 	* [渐进记号的定义](#渐进记号的定义)
-	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](##渐近记号ΘΟΩoω之间的关系)
+	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](#渐近记号ΘΟΩoω之间的关系)
 * [chapter04](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter04 "跳转到chapter04")
 	* [最大子数组问题](#最大子数组问题)  
 	暴力求解法  
