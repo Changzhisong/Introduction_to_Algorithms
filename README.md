@@ -8,10 +8,10 @@
 ****
 ## 目录
 * [chapter02](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter02 "跳转到chapter02")
-	* [插入排序](#插入排序)
-	* [选择排序](#选择排序)
-	* [归并排序](#归并排序)
-	* [冒泡排序](#冒泡排序)
+	* [插入排序](#插入排序【O($n^2$)】)
+	* [选择排序](#选择排序【O($n^2$)】)
+	* [归并排序](#归并排序【O(nlgn)】)
+	* [冒泡排序](#冒泡排序【O($n^2$)】)
 * [chapter03](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter03 "跳转到chapter03")
 	* [渐进记号的定义](#渐进记号的定义)
 	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](#渐近记号Θ、Ο、Ω、o、ω之间的关系)
@@ -20,10 +20,10 @@
 	暴力求解法  
 	分治递归法  
 	线性求解法（Kadane算法）  
-	* [矩阵乘法](#矩阵乘法)  
+	* [矩阵乘法](#矩阵乘法的Strassen算法)  
 	朴素求解法  
 	Strassen算法  
-	* [求解递归式](#求解递归式)  
+	* [求解递归式](#代入法求解递归式)  
 	代入法  
 	递归树  
 	主方法  
@@ -177,7 +177,7 @@ ___
 	**最大堆：** 除根节点外的任何节点的值小于等于父节点的值  
 	**最小堆：** 除根节点外的任何节点的值大于等于父节点的值  
 	以下以最大堆为例：  
-![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter06/doc/heap.jpg)   
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter06/doc/heap.jpg)   
 	* **维护堆的性质【O（lgn）】**  
 		节点i与其左右孩子的值对比选出最大者交换至i处，若最大者为i则结束否则向下递归直至子树都满足最大堆性质。且假定以其左右孩子为堆顶的堆均已是最大堆。
 	* **建堆【O（n）】**  
@@ -191,7 +191,7 @@ ___
 -----
 ### \######2017-9-11######
 * ### 快速排序  
-	采用分治思想：
+	采用分治思想：  
 	......明天再说。。。
 		
 		
