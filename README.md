@@ -259,12 +259,13 @@ ___
 		2.新建数组C[0..k],统计待排序数组中每个元素i出现的次数，并保存到C[i];  
 		3.对所有计数累加（从C的第一个元素开始，每一项和前一项相加）；
 		4.反向填充目标数组B[1..n],将A中每个元素i放到B的第C[i]项，每放一个C[i]减一。//有C[A[j]]个元素小于等于A[j],因此A[j]应在B的C[A[j]]的位置处。
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/countingSort.gif)  
 	* 基数排序【Θ(d(n+k))】  
 		
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/radixSort.gif)
 	* 桶排序【最坏：$Θ(n^2)$期望：$Θ(n)$】  
 		
-		
-		
+![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/bucketSort.gif)
 		
 		
 		
