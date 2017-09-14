@@ -40,7 +40,11 @@
 * [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
 	* [快速排序](#快速排序)
 * [chapter08](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter08 "跳转到chapter08")  
-	***更新中...***  
+	* [线性时间排序](#线性时间排序）  
+	计数排序
+	基数排序
+	桶排序
+
 ***
 ---
 ___
@@ -139,7 +143,7 @@ ___
 		$\begin{bmatrix}C_{11} &C_{12}  \\\  C_{21}& C_{22} \end{bmatrix}=\begin{bmatrix}A_{11} &A_{12}  \\\  A_{21}&A_{22}  \end{bmatrix}+\begin{bmatrix}B_{11} &B_{12}  \\\  B_{21}& B_{22} \end{bmatrix}$  
 ![ppt演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter04/Doc/矩阵相乘（递归）.jpg)   
 	* **Strassen算法【O($n^{lg7}$)=O($n^{2.81}$)】**  
-		Strassen算法的核心思想是令递归树不那么茂盛，即只递归进行7次而不是8次了。但代价是增加了几次矩阵之间的加法。
+		Strassen算法的核心思想是令递归树不那么茂盛，即只递归进行7次而不是8次了。但代价是增加了几次矩阵之间的加法。  
 ![ppt演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter04/Doc/矩阵相乘（Strassen算法）.jpg)   
 ![ppt演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter04/Doc/矩阵相乘（Strassen算法效率）.jpg)  
 
@@ -148,8 +152,8 @@ ___
 -----
 ### \######2017-8-21######
 * ### 代入法求解递归式  
-	1.猜测解的形式  
-	2.用数学归纳法求出解中的常数，并证明解是正确的。  
+	1.　猜测解的形式  
+	2.　用数学归纳法求出解中的常数，并证明解是正确的。  
 * ### 递归树方法求解  
 	递归树用于得到一个猜测的解，然后一般需要用代入法验证，如：  
 	$$T(n)=3T(n/4)+n^2$$
@@ -211,7 +215,7 @@ ___
 
 -----
 ### \######2017-9-12######
-* ### 快速排序  
+* ### 快速排序   
 	采用分治思想：  
 	　1.　从数列中选择一个元素，称为基准（一般选择列首或者列尾）；  
 	　2.　重新排列数列。把所有比基准小的元素放到其前面，大的放到其后面（分区操作）；  
@@ -219,11 +223,11 @@ ___
 	递归到最底部时，数列的大小是零或者是1，即已经排好序了。  
 	伪代码如下：
     ```
-	QuickSort（A,p,r）  
+	QuickSort(A,p,r)   
     if p<r  
         q=Partion(A，p,r)    //分区操作
-        QuickSort（A,p,q-1）    //左边递归
-        QuickSort（A,q+1,r）    //右边递归
+        QuickSort(A,p,q-1)    //左边递归
+        QuickSort(A,q+1,r)    //右边递归
     ```
 	其中分区操作Partition部分是代码的核心:
     ````
@@ -244,8 +248,21 @@ ___
 		只需在选择基准的时候采用随机化选择数列的某一个作为基准。然后与末位或者首位元素进行交换，在调用Partition(A,p,r)即可。
 
 -----
-### \######2017-9-12######
-**......**
+### \######2017-9-13######
+* ### 线性时间排序  
+	在最坏情况下， **任何比较排序算法都需要做Ω(nlgn)次比较**  
+	除了比较排序算法，还有一些非比较排序算法，如下三种：
+	* 计数排序【Θ(n+k)】  
+		对于每一个输入元素x，确定小于x的元素的个数，则可以确定x的正确排序的位置。例如：有100个人，统计出21个人的年龄比A小，因此A的年龄就应该排在第9位。用这个方法可以得到每个元素的位置，也就排好序了。  
+		`步骤：`
+		1.找出待排序数组A的最大元素k;  
+		2.新建数组C[0..k],统计待排序数组中每个元素i出现的次数，并保存到C[i];  
+		3.对所有计数累加（从C的第一个元素开始，每一项和前一项相加）；
+		4.反向填充目标数组B[1..n],将A中每个元素i放到B的第C[i]项，每放一个C[i]减一。//有C[A[j]]个元素小于等于A[j],因此A[j]应在B的C[A[j]]的位置处。
+	* 基数排序【Θ(d(n+k))】  
+		
+	* 桶排序【最坏：$Θ(n^2)$期望：$Θ(n)$】  
+		
 		
 		
 		
