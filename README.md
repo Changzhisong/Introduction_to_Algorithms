@@ -40,10 +40,10 @@
 * [chapter07](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter07 "跳转到chapter07")
 	* [快速排序](#快速排序)
 * [chapter08](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter08 "跳转到chapter08")  
-	* [线性时间排序](#线性时间排序）  
-	计数排序
-	基数排序
-	桶排序
+	* [线性时间排序](#线性时间排序)  
+	计数排序  
+	基数排序  
+	桶排序  
 
 ***
 ---
@@ -261,10 +261,12 @@ ___
 		4.反向填充目标数组B[1..n],将A中每个元素i放到B的第C[i]项，每放一个C[i]减一。//有C[A[j]]个元素小于等于A[j],因此A[j]应在B的C[A[j]]的位置处。
 ![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/countingSort.gif)  
 	* 基数排序【Θ(d(n+k))】  
-		
+		按位数进行排序，先所有个位开始排序，在十位，在百位...一直到最高位，数列即可完成排序。  
+		在每位进行排序时，采用稳定排序算法，一般采用计数排序作为子算法进行。  
 ![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/radixSort.gif)
 	* 桶排序【最坏：$Θ(n^2)$期望：$Θ(n)$】  
-		
+		将数列相邻的若干各元素分担到桶里，然后在对每一个桶进行排序（使用插入排序或者其他排序算法），最后将各个桶合并起来。  
+		例如：若value*numberOfElements/(maximum+1)值相同的元素可以放到等于该值的桶里。  
 ![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/bucketSort.gif)
 		
 		
