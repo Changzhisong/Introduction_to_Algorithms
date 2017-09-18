@@ -270,7 +270,10 @@ ___
 		`例如：`若 $value*NumberofElements/(Maximum+1)$ 值相同的元素可以放到等于该值的桶里。  
 ![图片演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter08/doc/bucketSort.gif)
 		
-		
+
+-----
+### \######2017-9-18######
+* ### 
 		
 		
 		
