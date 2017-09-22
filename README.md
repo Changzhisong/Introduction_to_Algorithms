@@ -277,6 +277,18 @@ ___
 	找出第K小/大的元素
 	* 期望为线性时间的选择算法
 		`思想:`利用快速排序中Randomised-QuicjSort中的模型，每次划分操作可以返回第##q-p+1##小的元素的索引，然后判断与k值的大小，递归，直到得到第k小的元素的索引。
+	```
+    Randomised-Select(A,p,r,k)
+    if p==r
+        return A[p]
+    q=Randomised-Partition(A,p,r)
+    t=q-p+1
+    if k==t
+        return A[q]
+    else if k<t
+        return Randomised-Selsect(A,p,q-1,k)
+    else return Randomised-Select(A,q+1,r,k-t)
+    ````
 	* 
 		
 		
