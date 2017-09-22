@@ -289,7 +289,9 @@ ___
         return Randomised-Selsect(A,p,q-1,k)
     else return Randomised-Select(A,q+1,r,k-t)
     ````
-	* 
+	**时间：** 在最坏情况下为$Θ(n^2)$,期望时间复杂度为$O(n)$  
+	* 最坏情况为线性时间的选择算法  
+	`思想：`将数列分别为5组，每组利用插入排序找出中位数，在递归调用Select算法找出
 		
 		
 		
