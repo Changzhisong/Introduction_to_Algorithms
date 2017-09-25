@@ -305,5 +305,5 @@ ___
 			 s.top=s.top+1
 			 s[s.top]=x  '''
 		2.delect操作(POP弹出)：  
-		
+		```POP
 		
