@@ -303,10 +303,16 @@ ___
 		1.insert操作(PUSH压入)：  
 		'''
           PUSH(S,x)
-          s.top=s.top+1
-          s[s.top]=x  
+          S.top=s.top+1
+          S[s.top]=x  
         '''
 		2.delect操作(POP弹出)：  
 		```
-          POP
+          POP(S)
+          if stack-Emply(S)
+              error "underflow"
+          else S.top=S.top-1
+              return S[S.top+1]
+         ```
+	* 队列的基本操作 
 		
