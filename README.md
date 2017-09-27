@@ -314,6 +314,7 @@ ___
           else S.top=S.top-1
               return S[S.top+1]
          ```
+		S.top=0,表明栈是空的。  
 	* 队列的基本操作 
 		1.insert操作（enqueue入队）
         ```
@@ -322,3 +323,14 @@ ___
         if Q.tail ==Q.length
             Q.tail =1
         else Q.tail++
+        ```
+		2.Deldect操作（Dequeue出队）
+		```
+        x=Q[Q.head]
+        if Q.head ==Q.length
+            Q.head=1
+        else Q.head=Q.Head+1
+        return x
+        ```
+		`注意：`元素可在最后的位置环绕，即感觉位置1是紧邻位置n后面。利用Q[1..n]来实现最多n-1个元素的队列  
+		Q.head=Q.tail,表明队列为空；Q.head = Q.tail+1 ,表明队列满了。  
