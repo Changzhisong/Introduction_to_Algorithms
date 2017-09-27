@@ -298,22 +298,22 @@ ___
 ### \######2017-9-25######
 * ### 栈和队列  
 	**栈:** 后进先出（LIFO）  
-	**队列:**先进先出（FIFO）  
-	* 栈的基本操作
+	**队列:** 先进先出（FIFO）  
+	* 栈的基本操作  
 		1.insert操作(PUSH压入)：  
-		'''
-          PUSH(S,x)
-          S.top=s.top+1
-          S[s.top]=x  
-        '''
+        ```
+        PUSH(S,x)
+        S.top=s.top+1
+        S[s.top]=x  
+        ```
 		2.delect操作(POP弹出)：  
-		```
-          POP(S)
-          if stack-Emply(S)
-              error "underflow"
-          else S.top=S.top-1
-              return S[S.top+1]
-         ```
+        ```
+        Pop(S)
+        if stack-Emply(S)
+            error "underflow"
+        else S.top=S.top-1
+            return S[S.top+1]
+        ```
 		S.top=0,表明栈是空的。  
 	* 队列的基本操作 
 		1.insert操作（enqueue入队）
