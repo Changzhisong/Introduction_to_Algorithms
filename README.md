@@ -315,4 +315,10 @@ ___
               return S[S.top+1]
          ```
 	* 队列的基本操作 
-		
+		1.insert操作（enqueue入队）
+        ```
+        Enqueue(Q,x)
+        Q[Q.tail]=x
+        if Q.tail ==Q.length
+            Q.tail =1
+        else Q.tail++
