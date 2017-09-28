@@ -299,14 +299,14 @@ ___
 * ### 栈和队列  
 	**栈:** 后进先出（LIFO）  
 	**队列:** 先进先出（FIFO）  
-	* 栈的基本操作  
-		1.insert操作(PUSH压入)：  
+	* **栈的基本操作**  
+		1.　insert操作(PUSH压入)：  
         ```
         PUSH(S,x)
         S.top=s.top+1
         S[s.top]=x  
         ```
-		2.delect操作(POP弹出)：  
+		2.　delect操作(POP弹出)：  
         ```
         Pop(S)
         if stack-Emply(S)
@@ -315,8 +315,8 @@ ___
             return S[S.top+1]
         ```
 		S.top=0,表明栈是空的。  
-	* 队列的基本操作 
-		1.insert操作（enqueue入队）
+	* **队列的基本操作** 
+		1.　insert操作（enqueue入队）
         ```
         Enqueue(Q,x)
         Q[Q.tail]=x
@@ -324,7 +324,7 @@ ___
             Q.tail =1
         else Q.tail++
         ```
-		2.Deldect操作（Dequeue出队）
+		2.　Deldect操作（Dequeue出队）
 		```
         x=Q[Q.head]
         if Q.head ==Q.length
