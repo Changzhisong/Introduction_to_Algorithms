@@ -309,7 +309,7 @@ ___
 		2.　delect操作(POP弹出)：  
         ```
         Pop(S)
-        if stack-Emply(S)
+        if stack-Emply(S)  
             error "underflow"
         else S.top=S.top-1
             return S[S.top+1]
