@@ -306,7 +306,7 @@ ___
         S.top=s.top+1
         S[s.top]=x  
         ```
-		2.　delect操作(POP弹出)：  
+		2.　delete操作(POP弹出)：  
         ```
         Pop(S)
         if stack-Emply(S)  
@@ -324,7 +324,7 @@ ___
             Q.tail =1
         else Q.tail++
         ```
-		2.　Deldect操作（Dequeue出队）
+		2.　Deletet操作（Dequeue出队）
 		```
         x=Q[Q.head]
         if Q.head ==Q.length
@@ -338,4 +338,4 @@ ___
 
 -----
 ### \######2017-10-14######
-* ### 链表  
+* ### 链表      
